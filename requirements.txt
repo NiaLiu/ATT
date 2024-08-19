@@ -1,0 +1,6 @@
+torch >=1.9.1
+torchvision
+kornia
+scipy
+tqdm
+wandb
