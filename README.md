@@ -40,21 +40,19 @@ Please change --dataset=CIFAR10 to CIFAR100 for results on CIFAR100. "--zca" ind
 ```
 python buffer_ATT.py --dataset=Tiny --model=ConvNetD4 --train_epochs=50 --num_experts=100 --data_path=data --buffer_path=buffer
 ```
-Note Tiny ImageNet requires download data beforehand, please refer tohttps://www.image-net.org.
 
 ### Create buffers for ImageNet
 ```
 python buffer_ATT.py --dataset=ImageNet --subset=imagenette --model=ConvNetD5 --train_epochs=50 --num_experts=100 --data_path=--data_path=data --buffer_path=buffer
 ```
 Please change augment "--subset=imagenette" to imagenette, imagewoof, imagefruit,  imagemeow. 
-Note ImageNet requires loading data beforehand, please refer to https://www.image-net.org.
 
 ## Distill synthetic datasets
 After creating and storing the expert trajectories, we will distill synthetic dataset with the following parameters.
 
 ![figure](figures/table.png "Hyperparameters")
 
-Please used the following command to reproduce our results:
+We used the following command in experiments:
 ### CIFAR10:
 IPC = 1:
 ```
@@ -137,6 +135,3 @@ https://github.com/BIGBALLON/CIFAR-ZOO
 
 https://gist.github.com/rwightman/f2d3849281624be7c0f11c85c87c1598
 
-Explorational code:
-
-Some of our other exploration code can be found in folder distill and folder buffer.
