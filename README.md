@@ -80,7 +80,7 @@ IPC = 50
 ```
 python3 distill_ATT.py --dataset=CIFAR100 --model=ConvNetD3 --ipc=50 --zca --syn_steps=80 --expert_epochs=2 --max_start_epoch=40 --lr_img=1e3 --lr_lr=1e-05 --lr_teacher=1e-2 --ema_decay=0.999 --eval_it=100000 --Iteration=100000 --batch_syn=1200 --buffer_path=buffer --data_path=data
 ```
-[comment]:<>(
+<!---
 ### Tiny ImageNet:
 IPC = 1:
 ```
@@ -102,7 +102,7 @@ IPC = 10:
 python3 distill_ATT.py --dataset=ImageNet --subset=imagenette --model=ConvNetD5 --ipc=10 --syn_steps=20 --expert_epochs=2 --max_start_epoch=10 --lr_img=1e04 --lr_lr=1e-04 --lr_teacher=1e-2 --ema_decay=0.999 --eval_it=1000 --Iteration=100000 --buffer_path=buffer --data_path=data
 ```
 Similar to case when IPC = 1, you can change augment "--subset=imagenette" with imagewoof, imagenette, imagefruit, imagemeow to distill other subsets.
-)
+-->
 ### Show cross-architecture performance on CIFAR10 with IPC=10:
 ```
 python3 distill_ATT.py --dataset=CIFAR10 --model=ConvNetD3 --ipc=10 --zca --syn_steps=30 --expert_epochs=2 --max_start_epoch=20 --lr_img=1e04 --lr_lr=1e-04 --lr_teacher=1e-02 --ema_decay=0.9999 --eval_it=100 --Iteration=60000 --buffer_path=buffer --data_path=data --eval_mode='M'
